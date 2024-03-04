@@ -18,9 +18,8 @@ def find_free_ports(start_port, end_port, num_ports):
 
         if len(free_ports) == num_ports:
             break
-    print("Free ports:", free_ports)
+    # print("Free ports:", free_ports)
     return free_ports
-
 
 # # Example usage: find 2 free ports between 5000 and 6000
 # free_ports = find_free_ports(5000, 6000, 4)
