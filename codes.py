@@ -16,3 +16,11 @@ class MasterCodes(Enum):
 
     def to_bytes(self):
         return self.value
+
+
+class NodeType(Enum):
+    MASTER = b"MASTER"
+    SLAVE = b"SLAVE"
+
+    def to_bytes(self):
+        return self.value

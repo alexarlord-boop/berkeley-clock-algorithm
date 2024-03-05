@@ -3,7 +3,7 @@ import time
 
 from challenges.logging import SynchronizedPrinter
 from ports import find_free_ports
-from settings import slave_tag, start_tag, stop_tag, slave_n
+from settings import slave_tag, start_tag, stop_tag, slave_n, slave_lifetime
 from slave import SlaveNode
 import random
 
@@ -21,17 +21,22 @@ def simulate_slave_lifecycle(master, duration):
     start_time = time.time()
 
     while time.time() - start_time < duration:
+
         # Simulate slaves joining dynamically
         new_slave_ports = find_free_ports(6000, 7000, slave_n)
-        new_slaves = [SlaveNode(port=p, master_port=master.port, time_bias=get_time_bias(new_slave_ports.index(p) + 1),
-                                tag=slave_tag) for p in new_slave_ports]
+        new_slaves = [SlaveNode(port=p,
+                                master_port=master.port,
+                                time_bias=get_time_bias(new_slave_ports.index(p) + 1),
+                                tag=slave_tag)
+                      for p in new_slave_ports]
+
         for slave in new_slaves:
             threading.Thread(target=slave.run).start()
         slaves = new_slaves
 
         sync_printer.print_message(f"{start_tag} New slave threads for ports {new_slave_ports} started.")
 
-        time.sleep(10)  # Adjust the sleep duration based on your needs
+        time.sleep(slave_lifetime)  # Adjust the sleep duration based on your needs
 
         # Simulate slaves leaving dynamically
         if slaves:

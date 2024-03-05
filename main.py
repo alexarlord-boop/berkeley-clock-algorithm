@@ -5,8 +5,7 @@ import time
 from challenges.node_management import simulate_slave_lifecycle
 from master import MasterNode
 from ports import find_free_ports
-from settings import general_latency, separator, master_tag, start_tag
-from slave import SlaveNode
+from settings import general_latency, separator, master_tag, start_tag, simulation_duration
 
 if __name__ == "__main__":
     free_ports = find_free_ports(5000, 6000, 1)
@@ -25,7 +24,8 @@ if __name__ == "__main__":
     print(f"{start_tag} Master thread for port {master_port} started.")
 
     # Start simulating dynamic slave lifecycle
-    simulate_thread = threading.Thread(target=simulate_slave_lifecycle, args=(master, 60))
+
+    simulate_thread = threading.Thread(target=simulate_slave_lifecycle, args=(master, simulation_duration))
     simulate_thread.start()
 
     while True:

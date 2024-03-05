@@ -4,18 +4,25 @@ import time
 import socket
 from random import random
 
+from Node import Node
 from challenges.logging import SynchronizedPrinter
 from settings import slave_n
-from codes import SlaveCodes, MasterCodes
+from codes import SlaveCodes, MasterCodes, NodeType
 
 
-class MasterNode(SynchronizedPrinter):
+class MasterNode(SynchronizedPrinter, Node):
     def __init__(self, port, tag):
         super().__init__()
+        self.node_type = NodeType.MASTER.to_bytes()
         self.port = port
-        self.slaves = {}  # {'port': [(conn, addr), time]}
-        self.lock = threading.Lock()
+        self.master_port = port
+        self.time_bias = 0
         self.tag = tag
+        self.running = True
+
+        # master node specific attributes
+        self.lock = threading.Lock()
+        self.slaves = {}  # {'port': [(conn, addr), time]}
 
     def run(self):
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,8 +36,6 @@ class MasterNode(SynchronizedPrinter):
                 threading.Thread(target=self.handle_slave, args=(conn, addr)).start()
         except Exception as e:
             self.print_message(f"{self.tag} thread error: {e}")
-            # Handle master failure, initiate reelection
-            self.initiate_master_reelection()
         finally:
             server_socket.close()
 
@@ -93,11 +98,3 @@ class MasterNode(SynchronizedPrinter):
                         except Exception as e:
                             self.print_message(f"{self.tag} Error communicating with slave {addr}: {e}")
 
-    def initiate_master_reelection(self):
-        with self.lock:
-            # Simple reelection logic: select a random slave as the new master
-            if self.slaves:
-                new_master_port = random.choice(list(self.slaves.keys()))
-                new_master_addr = self.slaves[new_master_port][0][1]
-                self.print_message(f"{self.tag} Initiating master reelection. New master: {new_master_addr}")
-                # You may want to notify other slaves about the new master

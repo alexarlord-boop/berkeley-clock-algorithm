@@ -2,18 +2,20 @@ import threading
 import time
 import socket
 
+from Node import Node
 from challenges.logging import SynchronizedPrinter
-from codes import SlaveCodes, MasterCodes
+from codes import SlaveCodes, MasterCodes, NodeType
 
 
-class SlaveNode(SynchronizedPrinter):
+class SlaveNode(SynchronizedPrinter, Node):
     def __init__(self, port, master_port, time_bias, tag):
         super().__init__()
+        self.node_type = NodeType.SLAVE.to_bytes()
         self.port = port
         self.master_port = master_port
         self.time_bias = time_bias
         self.tag = tag
-        self.running = True  # Flag to control the slave thread
+        self.running = True
 
     def run(self):
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
