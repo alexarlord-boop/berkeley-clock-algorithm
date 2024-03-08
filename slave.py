@@ -3,7 +3,7 @@ import socket
 
 from Node import Node
 from utilities.logging import SynchronizedPrinter
-from codes import SlaveCodes, MasterCodes, NodeType
+from utilities.codes import SlaveCodes, MasterCodes, NodeType
 
 
 class SlaveNode(SynchronizedPrinter, Node):

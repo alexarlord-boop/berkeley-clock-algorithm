@@ -62,7 +62,8 @@ S.	 6000 adjust: 1709911771.907735
 S.	 6001 adjust: 1709911771.907735
 --	 Slave thread for port 6000 stopped.
 ++	 New slave threads for ports [6002, 6003] started.
-S.	 Connected to master from 6002S.	 Connected to master from 6003
+S.	 Connected to master from 6002
+S.	 Connected to master from 6003
 M.	 Slave connected from ('127.0.0.1', 6002)
 M.	 Slave connected from ('127.0.0.1', 6003)
 ----------1 seconds of M-S communication passed----------

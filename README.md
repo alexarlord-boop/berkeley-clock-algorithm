@@ -20,7 +20,7 @@ Python
 ## Assumptions or simplifications made during the development process.
 1. Master and Slave nodes are independent entities (classes) without interchangeable functionality.
 2. To obtain time data from the slave nodes, master node initiate a thread lock for exclusive access to shared resources.
-3. In order to show dynamic slave node management, a simulation function ```simulate_slave_lifecycle``` is created.
+3. In order to show dynamic slave node management, a simulation function [simulate_slave_lifecycle](/challenges/node_management.py) is created.
 
 ## Improvements and TODOs.
 1. For the fault tolerance challenge, master and slave nodes should be interchangeable.

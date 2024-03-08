@@ -24,12 +24,13 @@
 ### 5. [utilities](/utilities)
 1. Free ports determination
 2. Synchronised log printing
+3. Constant codes for M-S communication
 
 [Results examle (logs)](/resources/log.txt)
 
 
 ## Challenge 1: Node management
-function ```simulate_slave_lifecycle``` generates slave nodes on free ports, then kills them after a limited lifetime.
+function [simulate_slave_lifecycle](/challenges/node_management.py) generates slave nodes on free ports, then kills them after a limited lifetime.
 Nodes join and leave the network without disrupting the synchronization process.
 
 ## Challenge 2: Fault tolerance - master node reelection

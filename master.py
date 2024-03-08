@@ -1,4 +1,3 @@
-# Inside MasterNode class in master.py
 import threading
 import time
 import socket
@@ -6,7 +5,7 @@ import socket
 from Node import Node
 from utilities.logging import SynchronizedPrinter
 from settings import slave_n
-from codes import SlaveCodes, MasterCodes, NodeType
+from utilities.codes import SlaveCodes, MasterCodes, NodeType
 
 
 class MasterNode(SynchronizedPrinter, Node):
@@ -44,7 +43,6 @@ class MasterNode(SynchronizedPrinter, Node):
             if port not in self.slaves:
                 self.slaves[port] = [(conn, addr), 0]
                 self.print_message(f"{self.tag} Slave connected from {addr}")
-                # threading.Thread(target=self.monitor_slave, args=(port,)).start()
 
     def synchronize_clocks(self):
         keys_to_remove = []
@@ -96,4 +94,3 @@ class MasterNode(SynchronizedPrinter, Node):
                             self.print_message(f"{self.tag} {port} offset: {slave_offset}")
                         except Exception as e:
                             self.print_message(f"{self.tag} Error communicating with slave {addr}: {e}")
-
