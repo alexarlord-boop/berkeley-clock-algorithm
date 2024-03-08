@@ -2,10 +2,9 @@
 import threading
 import time
 import socket
-from random import random
 
 from Node import Node
-from challenges.logging import SynchronizedPrinter
+from utilities.logging import SynchronizedPrinter
 from settings import slave_n
 from codes import SlaveCodes, MasterCodes, NodeType
 

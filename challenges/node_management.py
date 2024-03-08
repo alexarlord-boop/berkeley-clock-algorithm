@@ -1,8 +1,8 @@
 import threading
 import time
 
-from challenges.logging import SynchronizedPrinter
-from ports import find_free_ports
+from utilities.logging import SynchronizedPrinter
+from utilities.ports import find_free_ports
 from settings import slave_tag, start_tag, stop_tag, slave_n, slave_lifetime
 from slave import SlaveNode
 import random

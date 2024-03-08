@@ -1,0 +1,125 @@
+++	 Master thread for port 5001 started.
+----------1 seconds of M-S communication passed----------
+----------1 seconds of M-S communication passed----------
+++	 New slave threads for ports [6000, 6001] started.
+S.	 Connected to master from 6000
+S.	 Connected to master from 6001
+M.	 Slave connected from ('127.0.0.1', 6000)
+M.	 Slave connected from ('127.0.0.1', 6001)
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911763.871168, 1709911762.66757, 1709911762.6353667]
+M.	 6000 offset: 1.2035977840423584
+M.	 6001 offset: 1.2358012199401855
+S.	 6000 adjust: 1709911763.871168
+S.	 6001 adjust: 1709911763.871168
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911764.872931, 1709911763.6693144, 1709911763.6370597]
+M.	 6000 offset: 1.2036166191101074
+M.	 6001 offset: 1.2358713150024414
+S.	 6000 adjust: 1709911764.872931
+S.	 6001 adjust: 1709911764.872931
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911765.877341, 1709911764.6737273, 1709911764.6414914]
+M.	 6000 offset: 1.2036137580871582
+M.	 6001 offset: 1.2358496189117432
+S.	 6001 adjust: 1709911765.877341
+S.	 6000 adjust: 1709911765.877341
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911766.883208, 1709911765.6796303, 1709911765.6474996]
+M.	 6000 offset: 1.2035777568817139
+S.	 6000 adjust: 1709911766.883208
+M.	 6001 offset: 1.235708475112915
+S.	 6001 adjust: 1709911766.883208
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911767.888454, 1709911766.68487, 1709911766.6526525]
+M.	 6000 offset: 1.2035839557647705
+M.	 6001 offset: 1.2358014583587646
+S.	 6000 adjust: 1709911767.888454
+S.	 6001 adjust: 1709911767.888454
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911768.8943481, 1709911767.6907723, 1709911767.6586187]
+M.	 6000 offset: 1.203575849533081
+S.	 6000 adjust: 1709911768.8943481
+M.	 6001 offset: 1.235729455947876
+S.	 6001 adjust: 1709911768.8943481
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911769.8979719, 1709911768.694385, 1709911768.6622007]
+M.	 6000 offset: 1.2035868167877197
+M.	 6001 offset: 1.2357711791992188
+S.	 6000 adjust: 1709911769.8979719
+S.	 6001 adjust: 1709911769.8979719
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911770.903542, 1709911769.699953, 1709911769.6677575]
+M.	 6000 offset: 1.2035889625549316
+S.	 6000 adjust: 1709911770.903542
+M.	 6001 offset: 1.2357845306396484
+S.	 6001 adjust: 1709911770.903542
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911771.907735, 1709911770.7041552, 1709911770.6719985]
+M.	 6000 offset: 1.2035799026489258
+M.	 6001 offset: 1.235736608505249
+S.	 6000 adjust: 1709911771.907735
+S.	 6001 adjust: 1709911771.907735
+--	 Slave thread for port 6000 stopped.
+++	 New slave threads for ports [6002, 6003] started.
+S.	 Connected to master from 6002S.	 Connected to master from 6003
+M.	 Slave connected from ('127.0.0.1', 6002)
+M.	 Slave connected from ('127.0.0.1', 6003)
+----------1 seconds of M-S communication passed----------
+M.	 Error communicating with slave ('127.0.0.1', 6000): could not convert string to float: ''
+M.	 timestamps: [1709911772.913965, 1709911771.6781046, 1709911772.864926, 1709911775.0240462]
+M.	 Error communicating with slave ('127.0.0.1', 6000): [Errno 32] Broken pipe
+M.	 6001 offset: 1.2358603477478027
+M.	 6002 offset: 0.04903888702392578
+M.	 6003 offset: -2.110081195831299
+S.	 6001 adjust: 1709911772.913965
+S.	 6003 adjust: 1709911772.913965
+S.	 6002 adjust: 1709911772.913965
+----------1 seconds of M-S communication passed----------
+M.	 Error communicating with slave ('127.0.0.1', 6000): [Errno 32] Broken pipe
+M.	 timestamps: [1709911773.920436, 1709911772.6845095, 1709911773.8712842, 1709911776.030333]
+M.	 6001 offset: 1.2359263896942139
+S.	 6001 adjust: 1709911773.920436
+M.	 6002 offset: 0.04915165901184082
+S.	 6002 adjust: 1709911773.920436
+M.	 6003 offset: -2.1098971366882324
+S.	 6003 adjust: 1709911773.920436
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911774.924969, 1709911773.6890576, 1709911774.875868, 1709911777.0350082]
+M.	 6001 offset: 1.2359113693237305
+M.	 6002 offset: 0.04910087585449219
+M.	 6003 offset: -2.110039234161377
+S.	 6002 adjust: 1709911774.924969
+S.	 6003 adjust: 1709911774.924969
+S.	 6001 adjust: 1709911774.924969
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911775.93135, 1709911774.6954496, 1709911775.8823082, 1709911778.0414438]
+M.	 6001 offset: 1.2359004020690918
+S.	 6001 adjust: 1709911775.93135
+M.	 6002 offset: 0.049041748046875
+M.	 6003 offset: -2.110093832015991
+S.	 6003 adjust: 1709911775.93135
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911776.933901, 1709911775.6979966, 1709911776.884829, 1709911779.0439398]
+M.	 6001 offset: 1.2359044551849365
+S.	 6001 adjust: 1709911776.933901
+M.	 6002 offset: 0.0490720272064209
+S.	 6002 adjust: 1709911776.933901
+M.	 6003 offset: -2.1100387573242188
+S.	 6003 adjust: 1709911776.933901
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911777.9395251, 1709911776.7036116, 1709911777.8904111, 1709911780.049518]
+M.	 6001 offset: 1.2359135150909424
+M.	 6002 offset: 0.04911398887634277
+M.	 6003 offset: -2.1099929809570312
+S.	 6001 adjust: 1709911777.9395251
+S.	 6002 adjust: 1709911777.9395251
+S.	 6003 adjust: 1709911777.9395251
+----------1 seconds of M-S communication passed----------
+M.	 timestamps: [1709911778.945605, 1709911777.7096667, 1709911778.896454, 1709911781.0555131]
+M.	 6001 offset: 1.235938310623169
+S.	 6001 adjust: 1709911778.945605
+M.	 6002 offset: 0.049150943756103516
+S.	 6002 adjust: 1709911778.945605
+M.	 6003 offset: -2.109908103942871
+S.	 6003 adjust: 1709911778.945605

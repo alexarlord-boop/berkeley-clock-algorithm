@@ -4,7 +4,7 @@ import time
 
 from challenges.node_management import simulate_slave_lifecycle
 from master import MasterNode
-from ports import find_free_ports
+from utilities.ports import find_free_ports
 from settings import general_latency, separator, master_tag, start_tag, simulation_duration
 
 if __name__ == "__main__":

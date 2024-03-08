@@ -1,9 +1,8 @@
-import threading
 import time
 import socket
 
 from Node import Node
-from challenges.logging import SynchronizedPrinter
+from utilities.logging import SynchronizedPrinter
 from codes import SlaveCodes, MasterCodes, NodeType
 
 

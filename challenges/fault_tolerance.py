@@ -1,9 +1,3 @@
-import threading
-import time
-
-from challenges.logging import SynchronizedPrinter
-from master import MasterNode
-
 # all nodes can be a master node
 # nodes generated, one of them is chosen as master
 # master works, then die
