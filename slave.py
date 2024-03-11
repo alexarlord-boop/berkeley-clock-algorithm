@@ -6,7 +6,7 @@ from utilities.logging import SynchronizedPrinter
 from utilities.codes import SlaveCodes, MasterCodes, NodeType
 
 
-class SlaveNode(SynchronizedPrinter, Node):
+class SlaveNode(SynchronizedPrinter):
     def __init__(self, port, master_port, time_bias, tag):
         super().__init__()
         self.node_type = NodeType.SLAVE.to_bytes()

@@ -1,0 +1,16 @@
+new master selected
+slave Node-0 started.
+slave Node-1 started.
+master Node-2 started.
+slave Node-3 started.
+slave Node-4 started.
+Node-4 stopped.
+Node-3 stopped.
+Node-0 stopped.
+Node-1 stopped.
+new master selected
+Node-0 stopped.
+Node-1 stopped.
+Node-2 stopped.
+Node-3 stopped.
+Node-4 stopped.
