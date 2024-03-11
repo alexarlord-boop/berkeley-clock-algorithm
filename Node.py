@@ -1,12 +1,14 @@
+import settings
+
 
 class Node:
-    def __init__(self, node_type, port, tag, time_bias, master_port):
-        self.node_type = node_type
+    def __init__(self, port, tag, time_bias):
         self.port = port
-        self.master_port = master_port  # equals to port if master
         self.time_bias = time_bias  # equals to 0 if master
         self.tag = tag
-        self.running = True
+        self.is_master = False
+        self.is_alive = True
+        self.time_to_live = 10
 
     def run(self): pass
     def stop(self): pass
